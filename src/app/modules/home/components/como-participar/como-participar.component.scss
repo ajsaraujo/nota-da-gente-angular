@@ -1,0 +1,50 @@
+#banner{
+    background-color: var(--background-color);
+    margin-top: 10rem;
+    margin:3rem;
+    min-height: 100vh;
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.267);
+    a{
+        cursor: pointer;
+    }
+    #banner-btn{
+        color: var(--text-color);
+        padding: 1.5rem 2rem 1.5rem 2rem;
+        border-radius: 2rem;
+        border-color: var(--text-color);
+        border-style: solid;
+        border-width: 0.01rem;
+        font-weight: 500;
+    }
+    #banner-titulo{
+        font-size: 30pt;
+        padding: 3rem;
+    }
+    #banner-texto{
+        padding: 0 3rem 0 3rem;
+        text-align: justify;
+    }
+    #banner-icones{
+        margin-top: 3rem;
+        .icon-container{
+            margin-bottom: 3rem;
+        }
+        width: 100%;
+        padding: 3rem;
+        text-align: center;
+        *{
+            color:var(--text-quinary-color);
+        }
+        p{
+            font-weight: 500;
+        }
+        i{
+            margin-bottom: 2rem;
+            font-size: 6rem;
+            @media (max-width:600px){
+                font-size: 4rem;
+            }
+        }
+        background-color: var(--background-quinary-color);
+    }
+}

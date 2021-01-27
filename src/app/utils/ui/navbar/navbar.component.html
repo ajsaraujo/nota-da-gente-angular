@@ -1,0 +1,73 @@
+<div id="menu-container" [class]="{ visivel: headerVisible }">
+  <ng-container *ngTemplateOutlet="mobileMenu"></ng-container>
+  <ng-container *ngTemplateOutlet="desktopMenu"></ng-container>
+</div>
+
+<p-sidebar [(visible)]="mobileNavVisivel" position="left" [style]="{}">
+  <ng-container *ngTemplateOutlet="navMain"></ng-container>
+  <div class="custom-nav-elements">
+    <a (click)="navVisivel=true"> <span class="pi pi-ellipsis-h p-mr-3"></span> <span class="custom-nav-texto">Mais</span>  </a>
+  </div>
+</p-sidebar>
+
+<p-sidebar [(visible)]="navVisivel" position="left" [style]="{}">
+  <ng-container *ngTemplateOutlet="navSecundary"></ng-container>
+</p-sidebar>
+
+<ng-template #navMain>
+  <div class="custom-nav-elements">
+    <a> <span class="pi pi-sign-in p-mr-3"></span> <span class="ativo custom-nav-texto">Home</span>  </a>
+  </div>
+
+  <div class="custom-nav-elements">
+    <a > <span class="pi pi-sign-in p-mr-3"></span> <span class="custom-nav-texto">Sistema</span>  </a>
+  </div>
+
+  <div class="custom-nav-elements">
+    <a> <span class="pi pi-bell p-mr-3"></span> <span class="custom-nav-texto">Aviso</span>  </a>
+  </div>
+
+</ng-template>
+
+<ng-template #navSecundary>
+  <div class="custom-nav-elements ativo"><a href="">Meus Bilhetes</a></div>
+  <div class="custom-nav-elements"><a href="">Sorteios</a></div>
+  <div class="custom-nav-elements"><a href="">Reclame Aqui</a></div>
+  <div class="custom-nav-elements"><a href="">Empresas Participantes</a></div>
+  <div class="custom-nav-elements"><a href="">Manuais e Aplicativos</a></div>
+  <div class="custom-nav-elements"><a href="">Cadastro</a></div>
+</ng-template>
+
+<ng-template #mobileMenu>
+  <header
+    id="mobile-menu"
+    class="p-d-flex custom-menu p-justify-between p-px-5"
+  >
+    <a id="logo" class="pi pi-apple p-d-flex p-align-center"></a>
+    <button
+      pButton
+      type="button"
+      (click)="mobileNavVisivel = true"
+      icon="pi pi-align-justify"
+      class="p-button-text p-button-lg"
+    ></button>
+  </header>
+</ng-template>
+
+<ng-template #desktopMenu>
+  <header
+    id="desktop-menu"
+    class="p-d-flex custom-menu p-justify-between p-px-5"
+  >
+    <a id="logo" class="pi pi-apple p-d-flex p-align-center"></a>
+    <nav class="p-d-flex p-justify-around">
+      <div class="custom-nav-elements">
+        <a (click)="navVisivel = true">
+          <span class="pi pi-align-justify p-mr-2"></span> Menu</a
+        >
+      </div>
+      <ng-container *ngTemplateOutlet="navMain"></ng-container>
+      <div class="custom-nav-elements menu-button"><a href="">Cadastro</a></div>
+    </nav>
+  </header>
+</ng-template>

@@ -1,0 +1,72 @@
+@import "../node_modules/primeicons/primeicons.css";
+@import "../node_modules/primeng/resources/themes/saga-orange/theme.css";
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeflex/primeflex.css";
+
+@font-face {
+  font-family: "titilium web";
+  src: url("assets/fonts/TitilliumWeb-Light.ttf");
+}
+
+@font-face {
+  font-family: "titilium web bold";
+  src: url("assets/fonts/TitilliumWeb-Bold.ttf");
+}
+
+:root {
+  --text-color: #272727; 
+  --text-secundary-color:#272727;
+  --text-terciary-color:#272727;
+  --text-quarternary-color:white;
+  --text-quinary-color:white; 
+  ///cores de estilização
+  --primary-color:  #272727; ///cor de elementos da tela
+  --secundary-color:orange;  /// cor de detalhes
+  ///cores para preenchimento
+  --background-color: #FFFFFF;
+  --background-secundary-color: orange;
+  --background-terciary-color: white;
+  --background-quarternary-color: #272727;
+  --background-quinary-color: #272727;
+  --body-color: #FFFFFF;
+}
+
+// :root {
+//   --text-color: #272727;  ///textos principais
+//   --text-secundary-color: white;  ///textos estilizados
+//   --text-terciary-color: white;
+//   --text-quarternary-color: #272727;
+//   --text-quinary-color: white;
+//   ///cores de estilização
+//   --primary-color:  #272727; ///cor de elementos da tela
+//   --secundary-color:white;  /// cor de detalhes
+//   ///cores para preenchimento
+//   --background-color: white;  
+//   --background-secundary-color: orangeRed; 
+//   --background-terciary-color: #0075e3;
+//   --background-quarternary-color: #e0e0e0;
+//   --background-quinary-color: #272727; 
+//   --body-color: #0075e3;
+// }
+
+
+body {
+  background-color: var(--body-color);
+  margin:0;
+  a{
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  * {
+    font-family: "titilium web";
+    font-weight: 700;
+    font-size: 16pt;
+  }
+  p{
+    color: var(--text-color);
+  }
+  h1{
+    color: var(--text-color);
+    font-family: "titilium web bold";
+  }
+}

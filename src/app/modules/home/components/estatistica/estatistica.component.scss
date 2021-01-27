@@ -1,0 +1,20 @@
+#titulo-banner{
+    font-size: 30pt;
+}
+
+#banner{
+    *{
+        color: var(--text-secundary-color);
+    }
+    margin-top: 10rem;
+    width: 100%;
+    min-height: 100vh;
+    #banner-icones{
+        .icon-container{
+            margin-bottom: 4rem;
+        }
+        .pi{
+            font-size: 40pt;
+        }
+    }
+}
